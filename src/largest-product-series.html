@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Largest Product Series</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="largest-product-series.js"></script>
+<style>
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+</style>
+</head>
+<body ng-app="largestProductSeries" ng-controller="MainController">
+	<textarea style="width: 500px; height: 200px;" ng-model="inputString"
+		ng-change="findSeries(this.inputString, this.seriesLength)">  </textarea>
+
+	<input type="number" ng-model="seriesLength"
+		ng-change="findSeries(this.inputString, this.seriesLength)" />
+	<br />
+	<p ng-bind-html="resultString"></p>
+	Largest Product Series is:
+	<b class="green"> {{ result }} </b> </ p>
+</body>
+</html>
